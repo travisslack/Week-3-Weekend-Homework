@@ -25,6 +25,11 @@ film2.save()
 film3.save()
 
 ticket1 = Ticket.new ({'film_id' => film1.id, 'customer_id' => customer1.id})
+ticket2 = Ticket.new ({'film_id' => film2.id, 'customer_id' => customer1.id})
+ticket3 = Ticket.new ({'film_id' => film3.id, 'customer_id' => customer1.id})
+ticket1.save()
+ticket2.save()
+ticket3.save()
 
 
 customer1.name = "Travis"
@@ -34,6 +39,8 @@ p customer1
 film3.title = "Spiderman"
 film3.update
 p film3
+
+
 
 
 

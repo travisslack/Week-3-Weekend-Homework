@@ -31,9 +31,9 @@ class Customer
   end
 
   def films()
-    sql = "SELECT films.* from    films 
-    INNER JOIN visits ON visits.film_id = film.id
-    WHERE user_id = #{@id}"
+    sql = "SELECT films.* FROM films 
+    INNER JOIN tickets ON tickets.film_id = films.id
+    WHERE customer_id = #{@id}"
     return Film.map_items(sql)
   end
 

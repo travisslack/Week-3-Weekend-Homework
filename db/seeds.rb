@@ -2,6 +2,8 @@ require_relative('../models/customer')
 require_relative('../models/film')
 require_relative('../models/ticket')
 
+# ruby db/seeds.rb
+
 require( 'pry-byebug' )
 
 Ticket.delete_all()

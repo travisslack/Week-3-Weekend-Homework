@@ -30,6 +30,11 @@ class Customer
     return SqlRunner.run(sql)
   end
 
+  def delete_one
+    sql = "DELETE FROM customers where id = #{id}"
+    SqlRunner.run(sql)
+  end
+
   def films()
     sql = "SELECT films.* FROM films 
     INNER JOIN tickets ON tickets.film_id = films.id
